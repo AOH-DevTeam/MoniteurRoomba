@@ -1,0 +1,151 @@
+\hypertarget{class_liaison}{}\section{Référence de la classe Liaison}
+\label{class_liaison}\index{Liaison@{Liaison}}
+
+
+Réalise la communication avec le Roomba.  
+
+
+
+
+{\ttfamily \#include $<$Liaison.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Connexion\+Etablie} () const \hypertarget{class_liaison_adf5c86d29003736af1e06adb94c58d65}{}\label{class_liaison_adf5c86d29003736af1e06adb94c58d65}
+
+\item 
+void \hyperlink{class_liaison_adbccfcb0fd523be8dc4eb46bfb36f082}{configurer} (\hyperlink{class_config_liaison}{Config\+Liaison} cfg)
+\begin{DoxyCompactList}\small\item\em Définir la configuration de la liaison. \end{DoxyCompactList}\item 
+bool \hyperlink{class_liaison_ad760074370ae78ba996ccc1c2c85b91d}{connecter} ()
+\begin{DoxyCompactList}\small\item\em Établir la connexion au Roomba. \end{DoxyCompactList}\item 
+bool \hyperlink{class_liaison_a04b34111e5c80a2f429ac5209e7597b7}{deconnecter} ()
+\begin{DoxyCompactList}\small\item\em Refermer la connexion au Roomba. \end{DoxyCompactList}\item 
+void \hyperlink{class_liaison_ab1e3ee8df9a7930635950a3a04f1579c}{envoyer\+Commande} (Q\+Byte\+Array commande)
+\begin{DoxyCompactList}\small\item\em Envoyer au Roomba une commande. \end{DoxyCompactList}\item 
+\hyperlink{class_trame}{Trame} \hyperlink{class_liaison_aac991944c85ac165fcb6c213a2449313}{lire\+Trame} ()
+\begin{DoxyCompactList}\small\item\em Lire la trame envoyée par le Roomba. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_config_liaison}{Config\+Liaison} \hyperlink{class_liaison_a0357bc6671680d6b495fe25ce6d2b128}{m\+Cfg}\hypertarget{class_liaison_a0357bc6671680d6b495fe25ce6d2b128}{}\label{class_liaison_a0357bc6671680d6b495fe25ce6d2b128}
+
+\begin{DoxyCompactList}\small\item\em m\+Cfg La configuration de la liaison \end{DoxyCompactList}\item 
+Q\+Serial\+Port \hyperlink{class_liaison_a94a391d4b617c092e4cc3fd1d4397a6c}{m\+LS}\hypertarget{class_liaison_a94a391d4b617c092e4cc3fd1d4397a6c}{}\label{class_liaison_a94a391d4b617c092e4cc3fd1d4397a6c}
+
+\begin{DoxyCompactList}\small\item\em m\+LS Accès au port de communication série \end{DoxyCompactList}\item 
+bool \hyperlink{class_liaison_a9832b59d823545937decd984070c461e}{m\+Connexion\+Etablie}\hypertarget{class_liaison_a9832b59d823545937decd984070c461e}{}\label{class_liaison_a9832b59d823545937decd984070c461e}
+
+\begin{DoxyCompactList}\small\item\em m\+Connexion\+Etablie L\textquotesingle{}état de la liaison \+: true lors de la connexion au Roomba est réalisée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Réalise la communication avec le Roomba. 
+
+Elle réalise la configuration, l\textquotesingle{}ouverture et la ermeture de la connexion. Elle gère la réception de trames suivant le protocole R\+OI (Roomba Open Interface). 
+
+Définition à la ligne 21 du fichier Liaison.\+h.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Liaison@{Liaison}!configurer@{configurer}}
+\index{configurer@{configurer}!Liaison@{Liaison}}
+\subsubsection[{\texorpdfstring{configurer(\+Config\+Liaison cfg)}{configurer(ConfigLiaison cfg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Liaison\+::configurer (
+\begin{DoxyParamCaption}
+\item[{{\bf Config\+Liaison}}]{cfg}
+\end{DoxyParamCaption}
+)}\hypertarget{class_liaison_adbccfcb0fd523be8dc4eb46bfb36f082}{}\label{class_liaison_adbccfcb0fd523be8dc4eb46bfb36f082}
+
+
+Définir la configuration de la liaison. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em cfg} & La configuration de la liaison \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 3 du fichier Liaison.\+cpp.
+
+\index{Liaison@{Liaison}!connecter@{connecter}}
+\index{connecter@{connecter}!Liaison@{Liaison}}
+\subsubsection[{\texorpdfstring{connecter()}{connecter()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Liaison\+::connecter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_liaison_ad760074370ae78ba996ccc1c2c85b91d}{}\label{class_liaison_ad760074370ae78ba996ccc1c2c85b91d}
+
+
+Établir la connexion au Roomba. 
+
+\begin{DoxyReturn}{Renvoie}
+Retour\+: True si la connexion est réalisée 
+\end{DoxyReturn}
+
+
+Définition à la ligne 8 du fichier Liaison.\+cpp.
+
+\index{Liaison@{Liaison}!deconnecter@{deconnecter}}
+\index{deconnecter@{deconnecter}!Liaison@{Liaison}}
+\subsubsection[{\texorpdfstring{deconnecter()}{deconnecter()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Liaison\+::deconnecter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_liaison_a04b34111e5c80a2f429ac5209e7597b7}{}\label{class_liaison_a04b34111e5c80a2f429ac5209e7597b7}
+
+
+Refermer la connexion au Roomba. 
+
+\begin{DoxyReturn}{Renvoie}
+Retour\+: True si la connexion est refermée 
+\end{DoxyReturn}
+
+
+Définition à la ligne 13 du fichier Liaison.\+cpp.
+
+\index{Liaison@{Liaison}!envoyer\+Commande@{envoyer\+Commande}}
+\index{envoyer\+Commande@{envoyer\+Commande}!Liaison@{Liaison}}
+\subsubsection[{\texorpdfstring{envoyer\+Commande(\+Q\+Byte\+Array commande)}{envoyerCommande(QByteArray commande)}}]{\setlength{\rightskip}{0pt plus 5cm}void Liaison\+::envoyer\+Commande (
+\begin{DoxyParamCaption}
+\item[{Q\+Byte\+Array}]{commande}
+\end{DoxyParamCaption}
+)}\hypertarget{class_liaison_ab1e3ee8df9a7930635950a3a04f1579c}{}\label{class_liaison_ab1e3ee8df9a7930635950a3a04f1579c}
+
+
+Envoyer au Roomba une commande. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Paramètre} & commande\+: La commande a envoyer \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 17 du fichier Liaison.\+cpp.
+
+\index{Liaison@{Liaison}!lire\+Trame@{lire\+Trame}}
+\index{lire\+Trame@{lire\+Trame}!Liaison@{Liaison}}
+\subsubsection[{\texorpdfstring{lire\+Trame()}{lireTrame()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trame} Liaison\+::lire\+Trame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_liaison_aac991944c85ac165fcb6c213a2449313}{}\label{class_liaison_aac991944c85ac165fcb6c213a2449313}
+
+
+Lire la trame envoyée par le Roomba. 
+
+\begin{DoxyReturn}{Renvoie}
+Retour\+: La trame obtenue 
+\end{DoxyReturn}
+
+
+Définition à la ligne 21 du fichier Liaison.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/\+I\+R/fortin/\+Moniteur\+Roomba/\hyperlink{_liaison_8h}{Liaison.\+h}\item 
+/home/\+I\+R/fortin/\+Moniteur\+Roomba/Liaison.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_trame}{}\section{Référence de la classe Trame}
+\label{class_trame}\index{Trame@{Trame}}
+
+
+Stocke une trame comme suite d\textquotesingle{}octets, et permet d\textquotesingle{}extraire des valeurs à une poistion et selon un format donné, suivant les types employés dans le protocole R\+OI.  
+
+
+
+
+{\ttfamily \#include $<$Trame.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+qint32 \hyperlink{class_trame_a4f27e756e28a3f6031266b2915ad8f5f}{get\+Bit} (quint8 pos, quint8 bit)
+\begin{DoxyCompactList}\small\item\em Extrait de la trame la valeur d’un bit. \end{DoxyCompactList}\item 
+qint32 \hyperlink{class_trame_a9ad6bf3df1cf43d66571df3db1018056}{get\+Unsigned\+Byte} (quint8 pos)
+\begin{DoxyCompactList}\small\item\em Extrait de la trame un octet non signé \end{DoxyCompactList}\item 
+qint32 \hyperlink{class_trame_a183f007c20410a5c0cbf2093a02e42f8}{get\+Signed\+Byte} (quint8 pos)
+\begin{DoxyCompactList}\small\item\em Extrait de la trame un octet signé \end{DoxyCompactList}\item 
+qint32 \hyperlink{class_trame_acedfebffa3d8af24219e5460d4f597de}{get\+Unsigned\+Word} (quint8 pos)
+\begin{DoxyCompactList}\small\item\em Extrait de la trame un mot 16 bit non signé \end{DoxyCompactList}\item 
+qint32 \hyperlink{class_trame_afcb503453b50b388035e3c4ae0b606b9}{get\+Signed\+Word} (quint8 pos)
+\begin{DoxyCompactList}\small\item\em Extrait de la trame un mot 16 bit signé, en réalisant l’extension de signe sur 32 bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Stocke une trame comme suite d\textquotesingle{}octets, et permet d\textquotesingle{}extraire des valeurs à une poistion et selon un format donné, suivant les types employés dans le protocole R\+OI. 
+
+Définition à la ligne 17 du fichier Trame.\+h.
+
+
+
+\subsection{Documentation des fonctions membres}
+\index{Trame@{Trame}!get\+Bit@{get\+Bit}}
+\index{get\+Bit@{get\+Bit}!Trame@{Trame}}
+\subsubsection[{\texorpdfstring{get\+Bit(quint8 pos, quint8 bit)}{getBit(quint8 pos, quint8 bit)}}]{\setlength{\rightskip}{0pt plus 5cm}qint32 Trame\+::get\+Bit (
+\begin{DoxyParamCaption}
+\item[{quint8}]{pos, }
+\item[{quint8}]{bit}
+\end{DoxyParamCaption}
+)}\hypertarget{class_trame_a4f27e756e28a3f6031266b2915ad8f5f}{}\label{class_trame_a4f27e756e28a3f6031266b2915ad8f5f}
+
+
+Extrait de la trame la valeur d’un bit. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & L\textquotesingle{}adresse de l\textquotesingle{}octet dans la trame \\
+\hline
+{\em bit} & Le rang du bit à extraire (en commençant à 0 pour le L\+SB) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retour\+: La valeur du bit désigné 
+\end{DoxyReturn}
+
+
+Définition à la ligne 3 du fichier Trame.\+cpp.
+
+\index{Trame@{Trame}!get\+Signed\+Byte@{get\+Signed\+Byte}}
+\index{get\+Signed\+Byte@{get\+Signed\+Byte}!Trame@{Trame}}
+\subsubsection[{\texorpdfstring{get\+Signed\+Byte(quint8 pos)}{getSignedByte(quint8 pos)}}]{\setlength{\rightskip}{0pt plus 5cm}qint32 Trame\+::get\+Signed\+Byte (
+\begin{DoxyParamCaption}
+\item[{quint8}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{class_trame_a183f007c20410a5c0cbf2093a02e42f8}{}\label{class_trame_a183f007c20410a5c0cbf2093a02e42f8}
+
+
+Extrait de la trame un octet signé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & L\textquotesingle{}adresse de l\textquotesingle{}octet dans la trame, en réalisant l’extension de signe sur 32 bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retour\+: La valeur de l’octet à la position spécifié 
+\end{DoxyReturn}
+
+
+Définition à la ligne 11 du fichier Trame.\+cpp.
+
+\index{Trame@{Trame}!get\+Signed\+Word@{get\+Signed\+Word}}
+\index{get\+Signed\+Word@{get\+Signed\+Word}!Trame@{Trame}}
+\subsubsection[{\texorpdfstring{get\+Signed\+Word(quint8 pos)}{getSignedWord(quint8 pos)}}]{\setlength{\rightskip}{0pt plus 5cm}qint32 Trame\+::get\+Signed\+Word (
+\begin{DoxyParamCaption}
+\item[{quint8}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{class_trame_afcb503453b50b388035e3c4ae0b606b9}{}\label{class_trame_afcb503453b50b388035e3c4ae0b606b9}
+
+
+Extrait de la trame un mot 16 bit signé, en réalisant l’extension de signe sur 32 bits. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & L\textquotesingle{}adresse du 1er octet dans la trame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retour\+: Le mot formé par \mbox{[}pos\mbox{]} (M\+SB) et \mbox{[}pos+1\mbox{]} (L\+SB) 
+\end{DoxyReturn}
+
+
+Définition à la ligne 19 du fichier Trame.\+cpp.
+
+\index{Trame@{Trame}!get\+Unsigned\+Byte@{get\+Unsigned\+Byte}}
+\index{get\+Unsigned\+Byte@{get\+Unsigned\+Byte}!Trame@{Trame}}
+\subsubsection[{\texorpdfstring{get\+Unsigned\+Byte(quint8 pos)}{getUnsignedByte(quint8 pos)}}]{\setlength{\rightskip}{0pt plus 5cm}qint32 Trame\+::get\+Unsigned\+Byte (
+\begin{DoxyParamCaption}
+\item[{quint8}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{class_trame_a9ad6bf3df1cf43d66571df3db1018056}{}\label{class_trame_a9ad6bf3df1cf43d66571df3db1018056}
+
+
+Extrait de la trame un octet non signé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & L\textquotesingle{}adresse de l\textquotesingle{}octet dans la trame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retour\+: La veleur de l\textquotesingle{}octet à la position spécifiée 
+\end{DoxyReturn}
+
+
+Définition à la ligne 7 du fichier Trame.\+cpp.
+
+\index{Trame@{Trame}!get\+Unsigned\+Word@{get\+Unsigned\+Word}}
+\index{get\+Unsigned\+Word@{get\+Unsigned\+Word}!Trame@{Trame}}
+\subsubsection[{\texorpdfstring{get\+Unsigned\+Word(quint8 pos)}{getUnsignedWord(quint8 pos)}}]{\setlength{\rightskip}{0pt plus 5cm}qint32 Trame\+::get\+Unsigned\+Word (
+\begin{DoxyParamCaption}
+\item[{quint8}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{class_trame_acedfebffa3d8af24219e5460d4f597de}{}\label{class_trame_acedfebffa3d8af24219e5460d4f597de}
+
+
+Extrait de la trame un mot 16 bit non signé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & L\textquotesingle{}adresse du 1er octet dans la trame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retour\+: Le mot formé par \mbox{[}pos\mbox{]} (M\+SB) et \mbox{[}pos+1\mbox{]} (L\+SB) 
+\end{DoxyReturn}
+
+
+Définition à la ligne 15 du fichier Trame.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/\+I\+R/fortin/\+Moniteur\+Roomba/\hyperlink{_trame_8h}{Trame.\+h}\item 
+/home/\+I\+R/fortin/\+Moniteur\+Roomba/Trame.\+cpp\end{DoxyCompactItemize}
